@@ -7,6 +7,8 @@ public class Cars extends Showroom implements utility{
     int car_price;
     String car_type;
     String car_transmission;
+    String car_horsepower;
+    int car_mileage;
 
     @Override
     public void get_details(){
@@ -16,6 +18,8 @@ public class Cars extends Showroom implements utility{
         System.out.println("PRICE: "+car_price);
         System.out.println("CAR TYPE: "+car_type);
         System.out.println("TRANSMISSION: "+car_transmission);
+        System.out.println("HORSE POWER: "+car_horsepwer);
+        System.out.println("CAR FUEL ECONOMY: "+car_mileage);
     }
 
     @Override
@@ -32,10 +36,14 @@ public class Cars extends Showroom implements utility{
         System.out.print("CAR PRICE: ");
         car_price = sc.nextInt();
         sc.nextLine();
-        System.out.print("CAR TYPE(SEDAN/SUV/HATCHBACK): ");
+        System.out.print("CAR TYPE(SEDAN/SUV/HATCHBACK/COUPE/CONVERTIBLE/CROSSOVER/SPORTS CAR): ");
         car_type = sc.nextLine();
-        System.out.print("TRANSMISSION TYPE(AUTOMATIC/MANUAL): ");
+        System.out.print("TRANSMISSION TYPE(AUTOMATIC/MANUAL/AMT/IMT/DCT/CVT): ");
         car_transmission = sc.nextLine();
+        System.out.print("HORSE POWER(MECHANICAL HORSEPOWER/METRIC HORSEPOWER):");
+        car_horsepower = sc.nextLine();
+        System.out.print("CAR FUEL ECONOMY: ");
+        car_mileage = sc.nextInt();
         total_cars_in_stock++;
     }
 }
